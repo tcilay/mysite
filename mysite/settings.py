@@ -79,10 +79,27 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+# 使用mysql数据库
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # mysql
+        'ENGINE': 'django.db.backends.mysql',
+        # 数据库名称
+        'NAME': 'shop',
+        # 用户名
+        'USER': 'root',
+        # 密码
+        'PASSWORD': '123456',
+        # IP
+        'HOST': '119.29.86.132',
+        # 端口号
+        'PORT': '3306',
     }
 }
 

@@ -10,14 +10,11 @@
 
 >激活model  
 
-
     python manage.py makemigrations polls  
 >查看表  
 
-
     python manage.py sqlmigrate polls 0001  
 >创建表  
-
 
     python manage.py migrate  
 
@@ -28,10 +25,10 @@
 
 >创建管理员账号 
 
-
     python manage.py createsuperuser  
 
 #### 运行
+
     python manage.py runserver
 
 
@@ -55,15 +52,38 @@
 ##### 6.打包应用
 >django-polls 目录下执行  
 
-
     python setup.py sdist  
 >安装包  
-
 
     python -m pip install --user ./dist/django-polls-0.1.tar.gz  
 >卸载  
 
-
     python -m pip uninstall django-polls  
     
     
+#### 修改使用mysql数据库
+>settings.py 文件中配置数据库信息
+>>DATABASES = {  
+
+>>>   'default': {  
+>>>       # mysql  
+>>>       'ENGINE': 'django.db.backends.mysql',  
+>>>       # 数据库名称  
+>>>       'NAME': 'xxx',  
+>>>       # 用户名  
+>>>       'USER': 'root',  
+>>>       # 密码  
+>>>       'PASSWORD': 'xxx',  
+>>>       # IP  
+>>>       'HOST': 'xxx.xx.xx.xx',  
+>>>       # 端口号  
+>>>       'PORT': '3306',  
+>>>   }  
+
+>>}  
+
+>安装mysqlclient
+ 
+     pip install mysqlclient
+  
+  
